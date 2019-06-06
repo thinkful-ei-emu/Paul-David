@@ -16,6 +16,7 @@ function handleSubmit(){
   $('#form').submit( e=> {
     e.preventDefault();
     const input=$('#input').val();
+    //console.log(input);
     $('#input').val('');
     const array=fizzBuzz(input);
     let html =array.map((value)=>
