@@ -19,11 +19,17 @@ function handleSubmit(){
     //console.log(input);
     $('#input').val('');
     const array=fizzBuzz(input);
-    let html =array.map((value)=>
-      `<div class="fizz-buzz-item">
+    let html =array.map((value)=> {
+      if(typeof value==='string'){
+        return `<div class="fizz-buzz-item ${value}">
         <span>${value}</span>
-      </div>`
-    );
+        </div>`;
+      }
+
+      return `<div class="fizz-buzz-item">
+        <span>${value}</span>
+      </div>`;
+    });
     $('.js-results').html(html);
   
   });
