@@ -3,7 +3,7 @@
 'use strict';
 function toggleCheck(){
   $('.shopping-list').on('click','.shopping-item-toggle',e=>{
-    /* e.preventDefault();
+    /*e.preventDefault();
     let crossIt;
     if($(e.target).attr('class')==='shopping-item-toggle'){
       crossIt= $(e.target).parent().parent().children('span');
@@ -12,10 +12,13 @@ function toggleCheck(){
       crossIt= $(e.target).parent().parent().parent().children('span');
     }
     crossIt.toggleClass('shopping-item__checked'); */
+    
     e.preventDefault();
-    const parentParentChild= $(e.currentTarget).parent().siblings('span');/* 
+    console.log($(e.target));
     console.log($(e.currentTarget));
-    console.log($(parentParentChild)); */
+    console.log($(e.delegateTarget));
+    const parentParentChild= $(e.target).closest('li').find('.shopping-item');
+
     parentParentChild.toggleClass('shopping-item__checked');
   });
 }
