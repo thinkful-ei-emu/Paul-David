@@ -4,10 +4,12 @@
 function toggleCheck(){
   $('.shopping-list').on('click',$('.shopping-item-toggle'),e=>{
     e.preventDefault();
+   
     const parentParentChild= $(e.target).parent().closest('span');
     console.log(e.target);
     console.log(parentParentChild);
     parentParentChild.toggleClass('shopping-item__checked');
+    //e.stopPropogation();
   });
 }
 
@@ -20,7 +22,7 @@ function toggleDelete(){
 
 $(()=>{
   toggleCheck();
-  toggleDelete();
+  //toggleDelete();
   $('#js-shopping-list-form').on('submit',e=>{
     e.preventDefault();
     let newItem = $('#input').val();
