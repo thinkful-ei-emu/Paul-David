@@ -19,8 +19,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-ul{
-}
 html{
   margin:auto;
 }
@@ -31,13 +29,9 @@ html{
 
 }
 
-img{
-  width: 22%;
-  padding-right:3%;
-}
 .top{
   margin:auto;
-  size: 50%;
+  width: 100%;
 }
 .top>img{
   padding-right:0;
@@ -52,8 +46,15 @@ img{
 
 .lilcat{
   width:100%;
+  font-size:0px;
 }
 
 li{
   display:inline-block;
+  width: 125px;
+  height:75px;
+}
+li>img{
+  width: 125px;
+  height:75px;
 }
