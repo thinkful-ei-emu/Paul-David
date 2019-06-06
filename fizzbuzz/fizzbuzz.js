@@ -13,17 +13,18 @@ function fizzBuzz(countTo) {
 }
 
 function handleSubmit(){
-  event.preventDefault();
-  $('#form').submit( event=> {
-    const input=$('#form').val();
-    //$('#form').val()='';
+  $('#form').submit( e=> {
+    e.preventDefault();
+    const input=$('#input').val();
+    //console.log(input);
+    $('#input').val('');
     const array=fizzBuzz(input);
     let html =array.map((value)=>
       `<div class="fizz-buzz-item">
         <span>${value}</span>
       </div>`
     );
-    $('#js-results').html(html);
+    $('.js-results').html(html);
   
   });
 }
