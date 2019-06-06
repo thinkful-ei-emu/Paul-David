@@ -11,4 +11,21 @@ function fizzBuzz(countTo) {
   }
   return fb;
 }
+
+function handleSubmit(){
+  event.preventDefault();
+  $('#form').submit( event=> {
+    const input=$('#form').val();
+    //$('#form').val()='';
+    const array=fizzBuzz(input);
+    let html =array.map((value)=>
+      `<div class="fizz-buzz-item">
+        <span>${value}</span>
+      </div>`
+    );
+    $('#js-results').html(html);
+  
+  });
+}
+
  
