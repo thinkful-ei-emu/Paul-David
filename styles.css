@@ -20,6 +20,7 @@ time, mark, audio, video {
 }
 
 ul{
+}
 html{
   margin:auto;
 }
@@ -29,6 +30,7 @@ html{
   padding: none;
 
 }
+
 img{
   width: 22%;
   padding-right:3%;
@@ -38,10 +40,19 @@ img{
   size: 50%;
 }
 .top>img{
+  padding-right:0;
+  margin:auto;
   width:500px;
   height:500px;
 }
+.carousel{
+  margin:auto;
+  width:75%;
+}
 
+.lilcat{
+  width:100%;
+}
 
 li{
   display:inline-block;
