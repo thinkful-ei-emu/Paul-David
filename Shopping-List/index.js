@@ -14,18 +14,11 @@ function toggleCheck(){
     crossIt.toggleClass('shopping-item__checked'); */
     
     e.preventDefault();
-<<<<<<< HEAD
-   
-    const parentParentChild= $(e.target).parent().closest('span');
-    console.log(e.target);
-    console.log(parentParentChild);
-=======
     console.log($(e.target));
     console.log($(e.currentTarget));
     console.log($(e.delegateTarget));
     const parentParentChild= $(e.target).closest('li').find('.shopping-item');
 
->>>>>>> c8cfb84bf7a215dd6f1bd59fb1900dee46928207
     parentParentChild.toggleClass('shopping-item__checked');
     //e.stopPropogation();
   });
@@ -39,11 +32,6 @@ function toggleDelete(){
 }
 
 $(()=>{
-<<<<<<< HEAD
-  toggleCheck();
-  //toggleDelete();
-=======
->>>>>>> c8cfb84bf7a215dd6f1bd59fb1900dee46928207
   $('#js-shopping-list-form').on('submit',e=>{
     e.preventDefault();
     let newItem = $('#input').val();
